@@ -1,5 +1,8 @@
 # covid-tracker
 
+## Demo 
+Web demo: Click [Covid-Tracker](https://hzq-covid-stats.herokuapp.com/)
+
 ## Project setup
 ```
 npm install
