@@ -89,6 +89,7 @@ export default {
     },
     methods: {
         getStatistics() {
+            //get all countries covid statistics
             const statistics = localStorage.getItem("statistics")
 
             if(statistics) {
@@ -107,16 +108,14 @@ export default {
             })
                 .then(response => {
                     this.statistics = response.data.response
-                    console.log(response.data.response)
+                    // console.log(response.data.response)
                 })
                 .catch(error => {
                     console.log(error)
                 })
         },
         onClickSearch() {
-            // const search = `${this.country}`
-            // if(search !== '') {
-            // console.log(`Checking country name: ${this.country}`)
+            //Search by country name
             if(!this.country) return
             axios({
                 method: 'GET',
@@ -130,13 +129,14 @@ export default {
                 .then(response => {
                     this.statistics = response.data.response
                     this.country = ''
-                    console.log(response.data.response)
+                    // console.log(response.data.response)
                 })
                 .catch(error => {
                     console.log(error)
                 })
         },
         getNow() {
+            //get local time and date
             const today = new Date();
             const date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
             const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -144,9 +144,7 @@ export default {
             this.timestamp = dateTime;
         }
     },
-    watch: {
-        
-    }
+    
     
 };
 </script>

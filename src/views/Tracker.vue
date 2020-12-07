@@ -1,15 +1,15 @@
 <template>
     <div class="about">
-        <Jumbotron />
+        <TrackerLayout />
     </div>
 </template>
 
 <script>
-import Jumbotron from '../components/Jumbotron.vue'
+import TrackerLayout from '../components/TrackerLayout.vue'
 
 export default {
   components: {
-    Jumbotron,
+    TrackerLayout,
   },
 }
 </script>
